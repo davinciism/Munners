@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="container">
+    <span class="title" routerLink="/blogPosts">Munners</span>
+    <mat-slide-toggle
+    (click)="changeTheme()"
+    [color]="color"
+    [checked]="checked"
+    [disabled]="disabled">
+    </mat-slide-toggle>
+    <span class="spacer"></span>
+    <div *ngIf="auth.afAuth.authState | async as user; else showLogin">
+      <button mat-raised-button routerLink="/dashboard">Write a Post</button>
+      <button mat-button (click)="auth.logout()">Logout</button>
+    </div>
+    <ng-template #showLogin>
+      <button mat-button (click)="auth.login()">Login with Google</button>     
+    </ng-template>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,18 @@
+<section>
+
+  <mat-card *ngFor ="let BlogPost of blogPosts | async" >
+    <mat-card-header routerLink="{{BlogPost.id}}"> 
+      <mat-card-title>{{BlogPost.title}}</mat-card-title>
+      <mat-card-subtitle>Posted by {{BlogPost.author}} on {{BlogPost.published.toDate() | date: 'fullDate'}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{BlogPost.image}}" alt="{{BlogPost.title}}"/>
+    <!-- <mat-card-content>
+      <p>{{BlogPost.body}}</p>
+    </mat-card-content> -->
+    <mat-card-actions align="end" *ngIf="auth.currentUserId === BlogPost.authorId">
+      <button mat-icon-button><mat-icon>edit</mat-icon></button>
+      <button mat-icon-button (click)="delete(BlogPost.id)"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+
+</section>

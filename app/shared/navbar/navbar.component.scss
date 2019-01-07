@@ -1,0 +1,15 @@
+mat-toolbar{
+    .title{
+        font-size: 36px;
+    }
+    span:focus{
+        outline: none;
+        border: 0;
+    }
+    span:hover{
+        cursor: pointer;
+    }
+    .spacer{
+        flex: 1 1 auto;
+    }
+}

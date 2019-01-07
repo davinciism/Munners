@@ -1,0 +1,36 @@
+p{
+    color: #1a237e;
+    font-size: 24px;
+    padding-top: 8px;
+    line-height: 1.05;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 10vh;
+
+    h1{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 40px;
+        opacity: 0.7;
+        line-height: 1.1;
+    }
+
+    button{
+        width: 90%;
+        margin-top: 10px;
+        font-size: 22px;
+    }
+}
+
+.bottom{
+    position: absolute;
+    font-size: 20px;
+    bottom: 5px;
+    left: 5%;
+    color: #707070;
+}
