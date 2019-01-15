@@ -1,0 +1,32 @@
+//Custom file created to introduce custome theming in athe application
+
+@import '~@angular/material/theming';
+@include mat-core(); //mixin
+
+
+//Typography
+$custom-typography: mat-typography-config(
+  $font-family: Spectral,
+  $headline: mat-typography-level(24px, 48px, 400),
+  $body-1: mat-typography-level(16px, 24px, 400)
+);
+@include angular-material-typography($custom-typography);
+
+//Primary theme
+$light-primary: mat-palette($mat-indigo, 900);
+$light-accent: mat-palette($mat-pink, 200);
+$light-warn: mat-palette($mat-red, A700);
+$light-theme: mat-light-theme($light-primary, $light-accent);
+//Making the 'primary light' theme useable
+@include angular-material-theme($light-theme);
+
+
+//Secondary(dark) theme
+$dark-primary: mat-palette($mat-yellow, 900);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+//Making the 'secondary(dark)' theme useable
+.dark-theme{
+    @include angular-material-theme($dark-theme);
+}

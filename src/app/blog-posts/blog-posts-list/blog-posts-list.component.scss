@@ -1,0 +1,39 @@
+section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width: 90%;
+  padding-bottom: 70px;
+}
+mat-card{
+  margin: 2em auto;
+  max-width: 700px;
+  cursor: pointer;
+  mat-card-title{
+    font-size: 28px;
+    font-weight: 600;
+  }
+  img{
+    padding: 20px 0 20px 0;
+  }
+  mat-card-content{
+    font-size: 18px;
+  }
+}
+mat-card:focus{
+  outline: none;
+  border: 0;
+}
+h1{
+    cursor: pointer;
+}
+h1:focus{
+  outline: none;
+  border: 0;
+}
+img{
+  width: 100%;
+  margin: 0 auto;
+}

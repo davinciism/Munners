@@ -1,0 +1,31 @@
+$desktop: 800px;
+@mixin desktop{
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+mat-toolbar{
+    .title{
+        font-size: 36px;
+    }
+    span:focus{
+        outline: none;
+        border: 0;
+    }
+    span:hover{
+        cursor: pointer;
+    }
+    .spacer{
+        flex: 1 1 auto;
+    }
+    .rest{
+        display: none;
+        @include desktop{
+            display: inline;
+        }
+    }
+}
+button{
+    font-size: 18px;
+    font-weight: 600;
+}

@@ -1,0 +1,28 @@
+<!-- <ng-template #showTerms >
+  <div>
+    <p >By proceeding, you agree to the terms and conditions.</p>
+  </div>
+</ng-template> -->
+
+<mat-toolbar color="primary" *ngIf="auth.afAuth.authState | async as user;">
+  <mat-toolbar-row>
+    <div class="align-center">
+      <button mat-icon-button routerLink="/blogPosts" routerLinkActive="active">
+        <mat-icon aria-label="Home Button">home</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/muns" routerLinkActive="active">
+        <mat-icon aria-label="MUNs Button">account_balance</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/dashboard" routerLinkActive="active">
+        <mat-icon aria-label="MUNs Button">create</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/info" routerLinkActive="active">
+        <mat-icon aria-label="Info Button">info</mat-icon>
+      </button>
+      <button mat-icon-button routerLink="/account" routerLinkActive="active">
+        <mat-icon aria-label="Account Button">account_circle</mat-icon>
+      </button>
+      
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
