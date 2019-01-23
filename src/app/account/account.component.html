@@ -1,0 +1,43 @@
+<section class="container" @moveInOut>
+
+    <!-- <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Update your details.</mat-panel-title>
+            </mat-expansion-panel-header>
+    
+            <div>
+                <input type="file" name="file" id="file" (change)="uploadImage($event)" [(ngModel)]="user.photoUrl">
+                <div [hidden]="!uploadPercent">
+                    <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
+                </div>
+                <div [hidden]="!image">
+                    <img [src]="image || '//:0'"/>
+                </div>
+            </div>
+    
+            <mat-form-field>
+                <mat-select placeholder="School" [(ngModel)]="user.school">
+                    <mat-option value="option">City Montessori School</mat-option>
+                    <mat-option value="option">Seth M.R. jaipuria</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" (click)="updateUser()">Update!</button>
+        </mat-expansion-panel>
+    </mat-accordion> -->
+
+    <div *ngIf = "user" class="user-details">
+        <h1>Good{{moment}}, {{user.displayName}}!</h1>
+        <mat-divider [inset]="true"></mat-divider>
+        <img [src]="user.photoURl  || '//:0'" alt="">
+        <h3>Your Email:</h3><h5>{{user.email}}</h5>
+        <!-- <h3>School:</h3><h5>{{user.school}}</h5> -->
+        <mat-divider></mat-divider>
+        <p>Go ahead and create your first blog post to get started in this spectacular world of vitual munning. Hope to get you engaged with this new experience!</p>
+    </div>
+
+
+    <button mat-raised-button color="warn" class="logout"(click)="auth.logout()">Log Out</button>
+
+</section>

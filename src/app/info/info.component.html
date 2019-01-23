@@ -1,0 +1,22 @@
+<div class="contain container" @moveInOut>
+  <mat-vertical-stepper #stepper>
+      <mat-step>
+          <ng-template matStepLabel><h1 >About us</h1></ng-template>
+          <p>We, at Munners.Inc, are a group of developers. Through our skills, we aim to develop
+              a social workplace for all Munners to connect. 
+              The workplace is a platform for sharing one's thoughts and ideas, and 
+              everything else that a fellow Munner can benefit from.<br> </p>
+      </mat-step>
+      <mat-step>
+          <ng-template matStepLabel><h1 >Our vision</h1></ng-template>
+          <p>We aim to provide MUNs with a wide range of toolsets that benefit their presence in this community with easy management and
+              conduction of their MUN, and also a platform for their healthy competition as well as a means of
+              connecting a Munner to the MUNs.</p>
+      </mat-step>
+      <mat-step>
+          <ng-template matStepLabel><h1 >Work with us!</h1></ng-template>
+          <p>We work in an industry that is blessed with people having all sorts of talent. We may benefit from you and we will reciproacte this help. So if you think you possess the ability and are capable of working with us, do give it a thought and mail us at <strong>contact@munners.in</strong></p>
+      </mat-step>
+    </mat-vertical-stepper>
+    <button mat-raised-button (click)="openDialog()">Terms and Conditions</button>
+</div>

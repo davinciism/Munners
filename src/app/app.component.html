@@ -1,0 +1,9 @@
+<div [class.dark-theme]="otherTheme">
+
+  <navbar *ngIf="auth.afAuth.authState | async as user; "></navbar>
+  
+  <bottom-nav></bottom-nav>
+
+    <router-outlet #o="outlet"></router-outlet>
+
+</div>

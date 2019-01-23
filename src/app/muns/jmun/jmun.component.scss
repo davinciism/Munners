@@ -1,0 +1,36 @@
+section{
+    margin-top: 50px;
+    // opacity: 0.5;
+}
+mat-card{
+    height: auto;
+}
+mat-card:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px;
+}
+div{
+    height: 100%;
+    .top{
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px;
+        h1{
+            font-size: 24px;
+            margin: 0;
+            line-height: 1.0;
+        }    
+    }
+    .bottom{
+        height: calc(100% + 5vh );
+        img{
+            width: 25%;
+            float: left;
+        }
+        p{
+            font-size: 18px;
+            margin: 0;
+        }
+    
+    }
+}

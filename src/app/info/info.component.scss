@@ -1,0 +1,25 @@
+.contain{
+    max-width: 700px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+mat-step{
+    h1{
+        margin: 0;
+    }
+}
+h1{
+    font-size: 36px;
+    font-weight: 700; 
+    color: #1a237e;
+}
+p{
+    font-size: 24px;
+    line-height: 1.35;
+
+}
+button{
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

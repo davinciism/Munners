@@ -1,0 +1,36 @@
+<section class="container" @moveInOut>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Create a Blog Post</mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div>
+          <input type="file" name="file" id="file" (change)="uploadImage($event)">
+          <div [hidden]="!uploadPercent">
+              <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
+          </div>
+          <div [hidden]="!image">
+            <img [src]="image || '//:0'"/>
+          </div>
+      </div>
+
+      <mat-form-field>
+        <input matInput placeholder="Blog Post Title" [(ngModel)]="title">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <textarea matInput placeholder="Blog Post Body" [(ngModel)]="body" rows="10"></textarea>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" (click)="createBlogPost()" [disabled]="!title || !body">{{buttonText}}</button>
+
+      
+    </mat-expansion-panel>
+  </mat-accordion>
+  <p>Blog Post is the place where you'd share all the MUN related stuff. You may share your opinions, reviews, political views, experiences, etc. <br> Howsoever, this Blog Post is not meant for your personal photos. You may share your personal photos in the Photos Section (releasing soon).</p>
+
+</section>
+
+
+
